@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Realidad Aumentada</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.7/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        <a-box position="0 0.5 -1" color="red"></a-box>
+        <a-box
+            position="0 0.5 -1"
+            color="red"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 2000"
+            visible="false"
+        ></a-box>
+    </a-scene>
+</body>
+</html>
