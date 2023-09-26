@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación de Realidad Aumentada</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.7/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
-    <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-        <a-box position="0 0.5 -1" color="red"></a-box>
-        <a-box
-            position="0 0.5 -1"
-            color="red"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 2000"
-            visible="false"
-        ></a-box>
+    <a-scene embedded arjs="sourceType: webcam; trackingMethod: best;">
+    <a-marker preset="hiro">
+        <a-entity
+            gltf-model="<div class="sketchfab-embed-wrapper"> <iframe title="Riley the Labradoodle" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7595cec697ec426590adf2aed463feae/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/riley-the-labradoodle-7595cec697ec426590adf2aed463feae?utm_medium=embed&utm_campaign=share-popup&utm_content=7595cec697ec426590adf2aed463feae" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Riley the Labradoodle </a> by <a href="https://sketchfab.com/nathanmlange?utm_medium=embed&utm_campaign=share-popup&utm_content=7595cec697ec426590adf2aed463feae" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> N8 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7595cec697ec426590adf2aed463feae" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>"
+            scale="0.1 0.1 0.1"
+        ></a-entity>
+    </a-marker>
     </a-scene>
 </body>
 </html>
